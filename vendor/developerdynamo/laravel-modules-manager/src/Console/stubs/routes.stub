@@ -1,0 +1,7 @@
+<?php
+
+Route::group(['module' => '{{MODULE_NAME}}', 'namespace' => 'App\Modules\{{MODULE_NAME}}\Controllers'], function() {
+
+    Route::resource('{{MODULE_NAME}}', 'ExampleController');
+    
+});	

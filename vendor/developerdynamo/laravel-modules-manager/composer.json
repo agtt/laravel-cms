@@ -1,0 +1,13 @@
+{
+    "name": "developerdynamo/laravel-modules-manager",
+    "description": "Enable modules management in laravel application",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["laravel"],
+    "require": {},
+    "autoload": {
+	    "psr-4": {
+	        "DeveloperDynamo\\Modular\\": "src/"
+	    }
+	}
+}

@@ -1,0 +1,548 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Schoolfun - Study and Fun</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+	<meta name="description" content="Website Description" />
+	<meta name="keywords" content="Website Keywords" />
+	<link rel="stylesheet" type="text/css" media="all" href="style/style.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="style/prettyPhoto.css" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,900' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="style/stylemobile.css" />
+	<!-- <link rel="stylesheet" type="text/css" media="all" href="style/mobilenavigation.css" /> -->
+	<script src="script/modernizr.js" type="text/javascript"></script>
+	<script src="script/jquery.js" type="text/javascript"></script>
+    <script src="script/jquery-ui.js" type="text/javascript"></script>
+	<script src="script/jquery.flexslider.js" type="text/javascript"></script>
+	<script src="script/jquery.prettyPhoto.js" type="text/javascript"></script>
+	<script src="script/jquery.retina.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	$(document).ready(function (){
+        $(window).scroll(function () {
+            if ($(document).scrollTop() <= 40) {
+                $('#header-full').removeClass('small');
+                $('.tabs-blur').removeClass('no-blur');
+                $('#main-header').removeClass('small');
+            } else {
+                $('#header-full').addClass('small');
+                $('.tabs-blur').addClass('no-blur');
+                $('#main-header').addClass('small');
+            }
+        });
+        
+        $("a[data-rel^='prettyPhoto']").prettyPhoto({
+			default_width: 600,
+			default_height: 420,
+			social_tools: false
+		});
+        $('#slideshow-tabs').tabs({ show: { effect: "fade", duration: 200 }, hide: { effect: "fade", duration: 300 } });
+        $('#tabs-content-bottom').tabs({ show: { effect: "fade", duration: 200 }, hide: { effect: "fade", duration: 300 } });
+        $('.slider-tabs.flexslider').flexslider({
+            animation: "slide",
+            pauseOnAction: true
+        });
+        $('.slider-partners.flexslider').flexslider({
+            animation: "slide",
+            pauseOnAction: true,
+            itemWidth: 163,
+            itemMargin: 0
+        });
+		$('a[data-rel]').each(function() {
+			$(this).attr('rel', $(this).data('rel'));
+		});
+		$('img[data-retina]').retina({checkIfImageExists: true});
+		$(".open-menu").click(function(){
+		    $("body").addClass("no-move");
+		});
+		$(".close-menu, .close-menu-big").click(function(){
+		    $("body").removeClass("no-move");
+		});
+	});
+	</script>
+</head>
+<body>
+	<header id="main-header" class="clearfix">
+        <div id="header-full" class="clearfix">
+            <div id="header" class="clearfix">
+                <a href="#nav" class="open-menu">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				</a>
+                <a href="#" id="logo"><img src="images/logo.png" data-retina="images/logo-retina.png" alt="School Fun - WordPress Theme" /></a>
+                <aside id="header-content">
+                    <form method="post" action="#" id="searchform">
+                        <div>
+                            <input type="text" name="search" class="input" />
+                            <input type="submit" name="submitsearch" class="button" value="Search" />
+                        </div>
+                    </form>
+                    <ul id="nav-header">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Webmail</a></li>
+                        <li><a href="#">Student</a></li>
+                    </ul>
+                    <h3 id="slogan">"Fun. Study. Research. Innovate. Play"</h3>
+                </aside>
+            </div>
+        </div>
+        <nav id="nav" class="clearfix">
+                    <a href="#" class="close-menu-big">Close</a>
+                    <div id="nav-container">
+                        <a href="#" class="close-menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                        <ul id="nav-main">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="current-menu-item"><a href="about.html">About</a></li>
+                            <li><a href="#">News</a>
+                                <ul>
+                                    <li><a href="newslist.html">News List</a></li>
+                                    <li><a href="newsdetail.html">News Detail</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="event.html">Event</a></li>
+                            <li><a href="testimonial.html">Testimonial</a></li>
+                            <li><a href="team.html">Teacher</a></li>
+                            <li><a href="#">Other</a>
+                                <ul>
+                                    <li><a href="#">Color Variation</a>
+                                        <ul>
+                                            <li><a href="../maroon/">Maroon</a></li>
+                                            <li><a href="../blue/">Blue</a></li>
+                                            <li><a href="../green/">Green</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="history.html">History</a></li>
+                                    <li><a href="gallery.html">Gallery</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="fullpage.html">Full Page no Sidebar</a></li>
+                                    <li><a href="typography.html">Typography</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <a href="#" id="button-registration">Registration</a>
+                    </div>
+                </nav>
+    </header>
+    <div id="content-container">
+        <div id="content" class="clearfix">
+            <nav id="nav-sub-container" class="clearfix">
+                <ul id="nav-sub">
+                    <li><a href="#">Vision &amp; Mission</a></li>
+                    <li><a href="#">History</a></li>
+                    <li class="current-menu-item"><a href="#">Greeting from Rector</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Faculty</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div id="main-content">
+                <div id="breadcrumbs" class="clearfix">
+                    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="index.html" itemprop="url" class="icon-home">
+                            <span itemprop="title">Home</span>
+                        </a> <span class="arrow">&gt;</span>
+                    </div>  
+                    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="#" itemprop="url">
+                            <span itemprop="title">About Us</span>
+                        </a> <span class="arrow">&gt;</span>
+                    </div>  
+                    <div itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a href="#" itemprop="url">
+                            <span itemprop="title">History</span>
+                        </a> <span class="arrow">&gt;</span>
+                    </div>
+                    <span class="last-breadcrumbs">
+                        Greeting from our Principal - Mrs. John Doe
+                    </span>
+                </div>
+                <article class="static-page">
+                    <h1 id="main-title">Greetings from our Principal - <span>Mrs. John Doe</span></h1>
+                    <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer elementum tincidunt enim a ullamcorper. Donec vitae diam ante, at sagittis ipsum. Donec pretium euismod urna. Duis auctor nisl in magna pharetra condimentum. Sed luctus lorem ac augue aliquam in accumsan risus posuere. Sed ultricies ligula tristique ligula porttitor ac malesuada neque ultrices. Donec ipsum massa, scelerisque eu consequat et, eleifend ac mauris. Maecenas malesuada ligula quis augue elementum eget mollis mauris semper. Donec pellentesque, elit tempor iaculis adipiscing, massa libero vulputate magna, et sodales felis risus id orci. Phasellus porttitor sollicitudin condimentum. Proin sed mauris massa. Nunc nisl nibh, ornare nec imperdiet in, auctor vitae ante.</p>
+				<h2>H2 Tags Title</h2>
+				<p>Phasellus eget odio in dui tempus tempor. Vivamus eu tortor mauris, in adipiscing sapien. <a href="#">Cras erat metus</a>, aliquet et varius quis, pharetra in nulla. Etiam suscipit tincidunt blandit. Sed ac mi sem, ac auctor urna. Duis mollis scelerisque ligula sit amet feugiat. Nullam eros orci, eleifend sit amet lobortis id, pretium vel ligula. Donec at molestie metus. Praesent dignissim dolor lacus, sit amet lobortis orci. Nullam consectetur blandit elit, at elementum ligula porta in. Proin metus tortor, consectetur sit amet mattis id, lobortis sed leo. Vivamus sem ligula, eleifend nec rutrum ac, vehicula at massa. Quisque fermentum velit ac nibh hendrerit ultricies eget nec tortor. Mauris gravida tempor ornare. Etiam eget porttitor metus.</p>
+						<div class="separator"><a href="#">Top</a></div>
+						<h3>H3 Tags Title</h3>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. Allamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in anim id est laborum. </p>
+						<h4>H4 Tags Title</h4>
+						<img src="images/img-7-retina.jpg" alt="Images" class="alignleft imgframe" />
+						<p>Nam odio sem, vulputate vitae gravida vitae, porta eu mi. Sed bibendum sodales sollicitudin. Sed scelerisque elementum magna ac feugiat. Nam ipsum arcu, molestie eu sagittis sit amet, lobortis id diam. Suspendisse luctus est et enim tempor molestie. Proin pretium accumsan elit cursus blandit. Sed aliquam porttitor viverra.</p> 
+						<p>Donec nibh arcu, accumsan at fringilla a, rhoncus a augue. Nulla sit amet lacus ut augue tempus blandit. Donec nibh arcu, accumsan at fringilla a, rhoncus a augue. Nulla sit amet lacus ut augue tempus blandit.</p>
+						<ul>
+							<li>Proin metus tortor, consectetur sit amet mattis id, lobortis sed leo.</li>
+							<li>Proin pretium accumsan elit cursus blandit.</li>
+							<li>Sed aliquam porttitor viverra.</li>
+							<li>Donec nibh arcu, accumsan at fringilla a, rhoncus a augue.</li>
+							<li>Nulla sit amet lacus ut augue tempus blandit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+							<li>Maecenas sodales condimentum laoreet.</li>
+						</ul>
+						<h4>Table Sample</h4>
+						<table>
+							<thead>
+								<tr>
+									<th scope="col">Feature</th>
+									<th scope="col">Free Package</th>
+									<th scope="col">Business Package</th>
+									<th scope="col">Premium Package</th>
+								</tr>
+							</thead>
+							<tfoot>
+							    <tr>
+							        <td></td>
+							        <td><strong><a href="#">Order Now</a></strong></td>
+							        <td><strong><a href="#">Order Now</a></strong></td>
+							        <td><strong><a href="#">Order Now</a></strong></td>
+							    </tr>
+							</tfoot>
+							<tbody>
+								<tr class="odd">
+							        <td class="cellfeat">OS</td>
+							        <td>Linux</td>
+							        <td>Windows</td>
+							        <td>MacOs</td>
+							    </tr>
+							    <tr>
+							        <td class="cellfeat">24H Support</td>
+							        <td><img src="images/icon_20.png" alt="No" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr class="odd">
+							        <td class="cellfeat">Free Lifetime Update</td>
+							        <td><img src="images/icon_20.png" alt="No" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr>
+							        <td class="cellfeat">Email Address</td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr class="odd">
+							        <td class="cellfeat">Search Engine Optimisation</td>
+							        <td><img src="images/icon_20.png" alt="No" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr>
+							        <td class="cellfeat">24H Support</td>
+							        <td><img src="images/icon_20.png" alt="No" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr class="odd">
+							        <td class="cellfeat">Free Lifetime Update</td>
+							        <td><img src="images/icon_20.png" alt="No" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr>
+							        <td class="cellfeat">Email Address</td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr class="odd">
+							        <td class="cellfeat">Search Engine Optimisation</td>
+							        <td><img src="images/icon_20.png" alt="No" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr>
+							        <td class="cellfeat">Email Address</td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							        <td><img src="images/icon_9.png" alt="Yes" /></td>
+							    </tr>
+							    <tr class="odd">
+							        <td class="cellfeat">Price</td>
+							        <td><strong>Free</strong></td>
+							        <td><strong>$199</strong></td>
+							        <td><strong>$299</strong></td>
+							    </tr>
+							</tbody>
+						</table>
+						<h5>H5 Tags Title</h5>
+						<blockquote><p>Proin metus tortor, consectetur sit amet mattis id, lobortis sed leo. Vivamus sem ligula, eleifend nec rutrum ac, vehicula at massa. Quisque fermentum velit ac nibh hendrerit ultricies eget nec tortor. Quisque fermentum velit ac nibh hendrerit ultricies eget nec tortor.</p></blockquote>
+						<h6>H6 Tags Title</h6>
+						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus mi nec turpis interdum cursus semper neque scelerisque. Suspendisse sit amet arcu risus. Aenean mollis tristique eros et feugiat. Praesent urna mi, adipiscing et pharetra eget, dapibus sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sit amet arcu risus. Aenean mollis tristique eros et feugiat. Praesent urna mi, adipiscing et pharetra eget, dapibus sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+								<div class="colhalf">
+									<h3>Title H3</h3>
+						<blockquote><p>Proin metus tortor, consectetur sit amet mattis id, lobortis sed leo. Vivamus sem ligula, eleifend nec rutrum ac, vehicula at massa. Quisque fermentum velit ac nibh hendrerit ultricies eget nec tortor. Quisque fermentum velit ac nibh hendrerit ultricies eget nec tortor.</p></blockquote>
+						<h6>H6 Tags Title</h6>
+						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus mi nec turpis interdum cursus semper neque scelerisque. Suspendisse sit amet arcu risus. Aenean mollis tristique eros et feugiat. Praesent urna mi, adipiscing et pharetra eget, dapibus sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse sit amet arcu risus. Aenean mollis tristique eros et feugiat. Praesent urna mi, adipiscing et pharetra eget, dapibus sit amet risus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+								</div>
+								<div class="colhalf lastcol">
+									<h2>This is Last Column</h2>
+									<p>Phasellus eget odio in dui tempus tempor. Vivamus eu tortor mauris, in adipiscing sapien. Cras erat metus, aliquet et varius quis, pharetra in nulla. Etiam suscipit tincidunt blandit. Sed ac mi sem, ac auctor urna. Duis mollis scelerisque ligula sit amet feugiat. Nullam eros orci, eleifend sit amet lobortis id, pretium vel ligula. Donec at molestie metus. Praesent dignissim dolor lacus, sit amet lobortis orci. Nullam consectetur blandit elit, at elementum ligula porta in. Proin metus tortor, consectetur sit amet mattis id, lobortis sed leo. Vivamus sem ligula, eleifend nec rutrum ac, vehicula at massa. Quisque fermentum velit ac nibh hendrerit ultricies eget nec tortor. Mauris gravida tempor ornare. Etiam eget porttitor metus.</p>
+									<div class="separator"><a href="#">Top</a></div>
+									<p>Nullam consectetur blandit elit, at elementum ligula porta in. Proin metus tortor, consectetur sit amet mattis id, lobortis sed leo. Vivamus sem ligula, eleifend nec rutrum ac, vehicula at massa. Quisque fermentum velit ac nibh hendrerit ultricies eget nec tortor. Mauris gravida tempor ornare. Etiam eget porttitor metus.</p>
+								</div>
+								<div class="clear"></div>
+                </article>
+            </div>
+            <div id="sidebar">
+                <aside class="widget-container">
+                    <div class="widget-wrapper clearfix">
+				        <h3 class="widget-title">Quick Navigation</h3>
+                        <ul>
+                            <li><a href="#">Student Information</a></li>
+                            <li><a href="#">Faculty &amp; Facility</a></li>
+                            <li><a href="#">Curriculum</a></li>
+                            <li><a href="#">Alumni</a></li>
+                            <li><a href="#">Research Department</a></li>
+                            <li><a href="#">Career Opportunity</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <aside class="widget-container">
+				        <div class="widget-wrapper clearfix">
+				            <h3 class="widget-title">Latest Blog</h3>
+				                <ul class="menu news-sidebar">			
+								    <li class="clearfix">
+								        <img src="images/img-4.jpg" data-retina="images/img-4-retina.jpg" alt="We Sent our Student to Himalaya to Study and Hiking" class="imgframe alignleft" />
+                                        <h4><a href="#">We Sent our Student to Himalaya to Study and Hiking</a></h4>
+								        <span class="date-news">October 5, 2013</span>
+								    </li>
+									<li class="clearfix">
+								        <img src="images/img-5.jpg" data-retina="images/img-5-retina.jpg" alt="We are opening Modelling Night Course" class="imgframe alignleft" />
+                                        <h4><a href="#">We are opening Modelling Night Course</a></h4>
+								        <span class="date-news">October 2, 2013</span>
+								    </li>
+								    <li class="clearfix">
+								        <img src="images/img-6.jpg" data-retina="images/img-6-retina.jpg" alt="Photography Club 120 Year Birthday Beach Party" class="imgframe alignleft" />
+								        <h4><a href="#">Photography Club 120 Year Birthday Beach Party</a></h4>
+								        <span class="date-news">September 30, 2013</span>
+								    </li>
+                                    <li class="clearfix">
+								        <img src="images/img-7.jpg" data-retina="images/img-7-retina.jpg" alt="Photography Club 120 Year Birthday Beach Party" class="imgframe alignleft" />
+								        <h4><a href="#">We are opening Medical Faculty in our new Campus</a></h4>
+								        <span class="date-news">September 30, 2013</span>
+								    </li>
+								</ul>
+								<a href="newslist.html" class="button-more">Read More Blog Post</a>
+				        </div>
+				</aside>
+                <aside class="widget-container">
+                    <div class="widget-wrapper clearfix">
+				        <h3 class="widget-title">Latest Event</h3>
+                        <ul class="menu event-sidebar">			
+								    <li class="clearfix">
+								        <div class="event-date-widget">
+                                            <strong>28</strong>
+                                            <span>Nov</span>
+                                        </div>
+                                        <div class="event-content-widget">
+                                            <article>
+                                                <h4><a href="#">Musicfest 2013</a></h4>
+                                                <p>November 28, 2013 - November 30, 2013<br />
+                                                    9:00 AM - 10:00 AM
+                                                </p>
+                                                <em>Campus Auditorium</em>
+                                            </article>
+                                            <article>
+                                                <h4><a href="#">HTML5 &amp; CSS3 Workshop</a></h4>
+                                                <p>November 28, 2013<br />
+                                                    11:00 AM - 1:00 PM
+                                                </p>
+                                                <em>IT Center Building E</em>
+                                            </article>
+                                            <article>
+                                                <h4><a href="#">Free TOEFL &amp; IBT Test</a></h4>
+                                                <p>November 28, 2013<br />
+                                                    2:00 PM - 2:00 PM
+                                                </p>
+                                                <em>Main English Classroom</em>
+                                            </article>
+                                        </div>
+								    </li>
+                                    <li class="clearfix">
+								        <div class="event-date-widget">
+                                            <strong>25</strong>
+                                            <span>Nov</span>
+                                        </div>
+                                        <div class="event-content-widget">
+                                            <article>
+                                                <h4><a href="#">Foodfest 2013</a></h4>
+                                                <p>November 25, 2013 - November 27, 2013<br />
+                                                    9:00 AM - 10:00 AM
+                                                </p>
+                                                <em>Campus Canteen</em>
+                                            </article>
+                                            <article>
+                                                <h4><a href="#">Student Festival</a></h4>
+                                                <p>November 25, 2013 - November 26, 2013<br />
+                                                    8:00 AM - 9:00 AM
+                                                </p>
+                                                <em>Basketball Court</em>
+                                            </article>
+                                             <article>
+                                                <h4><a href="#">Free TOEFL &amp; IBT Test</a></h4>
+                                                <p>November 28, 2013<br />
+                                                    2:00 PM - 2:00 PM
+                                                </p>
+                                                <em>Main English Classroom</em>
+                                            </article>
+                                        </div>
+								    </li>
+								</ul>
+                        <a href="eventlist.html" class="button-more">More Event</a>
+                    </div>
+                </aside>
+            </div>
+            <div id="tabs-content-bottom">
+                <ul id="nav-content-bottom" class="clearfix">
+                    <li><a href="#panel-1">Student Center</a></li>
+                    <li><a href="#panel-2">Quick Navigation</a></li>
+                    <li><a href="#panel-3">Sample Text Content</a></li>
+                    <li><a href="#panel-4">Partners</a></li>
+                </ul>
+                <div class="ui-tabs-panel clearfix" id="panel-1">
+                    <ul id="nav-sidebar-bottom" class="clearfix">
+                        <li><a href="#" class="clearfix">
+                            <figure><img src="images/icon-sidebar-1.png" alt="Contact Us" /></figure>
+                            <strong class="title-nav-sidebar">Contact Us Now</strong>
+                            <strong>Phone:</strong> +62 384856, +62 5456789 <strong>Fax:</strong> +62 45677896
+                            </a></li>
+                        <li><a href="#" class="clearfix">
+                            <figure><img src="images/icon-sidebar-2.png" alt="Location" /></figure>
+                            <strong class="title-nav-sidebar">Location</strong>
+                            Click here to get direction to our campus location by bus or train
+                            </a></li>
+                        <li><a href="#" class="clearfix">
+                            <figure><img src="images/icon-sidebar-3.png" alt="Location" /></figure>
+                            <strong class="title-nav-sidebar">Live Chat</strong>
+                            Talk with our Customer Service or our student and alumni
+                            </a></li>
+                        <li><a href="#" class="clearfix">
+                            <figure><img src="images/icon-sidebar-4.png" alt="Library and Research" /></figure>
+                            <strong class="title-nav-sidebar">Library &amp; Research</strong>
+                            Talk with our Customer Service or our student and alumni
+                            </a></li>
+                         <li><a href="#" class="clearfix">
+                            <figure><img src="images/icon-sidebar-5.png" alt="Library and Research" /></figure>
+                            <strong class="title-nav-sidebar">Faculty Department</strong>
+                            From Politic, Nuclear and Graphic Design, we have everything.
+                            </a></li>
+                    </ul>
+                </div>
+                <div class="ui-tabs-panel clearfix" id="panel-2">
+                    <ul class="nav-tabs-bottom">
+                        <li><a href="#">Curicculum &amp; Campus</a></li>
+                        <li><a href="#">Research Center</a></li>
+                        <li><a href="#">Greeting from Principal</a></li>
+                        <li><a href="#">E-Learning</a></li>
+                        <li><a href="#">Laboratorium</a></li>
+                        <li><a href="#">Campus Location</a></li>
+                        <li><a href="#">Asked Alumni</a></li>
+                        <li><a href="#">Registration</a></li>
+                        <li><a href="#">Upcoming Event</a></li>
+                        <li><a href="#">Campus Achivement</a></li>
+                        <li><a href="#">Magazine</a></li>
+                        <li><a href="#">Live in Campus</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Student Webmail</a></li>
+                        <li><a href="#">News &amp; Blog</a></li>
+                        <li><a href="#">Future Student</a></li>
+                        <li><a href="#">Night Class</a></li>
+                        <li><a href="#">Study on Field</a></li>
+                    </ul>
+                </div>
+                <div class="ui-tabs-panel clearfix" id="panel-3">
+                    <article>
+                        <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Nunc euismod felis sem, ac sodales justo viverra eu. Phasellus dui eros, dictum sed arcu id, adipiscing lobortis orci. Phasellus porta lectus id varius fermentum. <a href="#">Nulla facilisi</a>. Sed viverra felis eu lacinia portal</p>
+                        <p>Morbi tincidunt lacus eu vehicula consectetur. Nulla facilisi.</p>
+                    </article>
+                </div>
+                <div class="ui-tabs-panel clearfix" id="panel-4">
+                    <div class="flexslider slider-partners">
+                        <ul class="slides">
+                            <li><a href="#"><img src="images/img-13.png" data-retina="images/img-13-retina.png" alt="Hawlett Package" /></a></li>
+                            <li><a href="#"><img src="images/img-14.png" data-retina="images/img-14-retina.png" alt="Google Play" /></a></li>
+                            <li><a href="#"><img src="images/img-15.png" data-retina="images/img-15-retina.png" alt="Linkedin" /></a></li>
+                            <li><a href="#"><img src="images/img-16.png" data-retina="images/img-16-retina.png" alt="Google" /></a></li>
+                            <li><a href="#"><img src="images/img-17.png" data-retina="images/img-17-retina.png" alt="Ebay" /></a></li>
+                            <li><a href="#"><img src="images/img-13.png" data-retina="images/img-13-retina.png" alt="Hawlett Package" /></a></li>
+                            <li><a href="#"><img src="images/img-14.png" data-retina="images/img-14-retina.png" alt="Google Play" /></a></li>
+                            <li><a href="#"><img src="images/img-15.png" data-retina="images/img-15-retina.png" alt="Linkedin" /></a></li>
+                            <li><a href="#"><img src="images/img-16.png" data-retina="images/img-16-retina.png" alt="Google" /></a></li>
+                            <li><a href="#"><img src="images/img-17.png" data-retina="images/img-17-retina.png" alt="Ebay" /></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="main-footer" style="background:url(images/img-8.jpg) no-repeat 50% 0;">
+        <div id="blur-top">
+            <a href="#" id="link-back-top">Back to Top</a>
+        </div>
+        <div id="slogan-footer">
+            <h4>Leading Together <span>for</span> Brighter Future</h4>
+        </div>
+        <div id="footer-content" class="clearfix">
+            <div id="footer-container">
+                <div id="sidebar-footer-left" class="sidebar-footer">
+                    <aside class="widget-container">
+                        <div class="widget-wrapper clearfix">
+                            <h3 class="widget-title">Quick Navigation</h3>
+                            <ul>
+                                <li><a href="#">Research, Library and Publication</a></li>
+                                <li><a href="#">Alumni Center</a></li>
+                                <li><a href="#">Academic Community</a></li>
+                                <li><a href="#">Extra Curricullum and Student Event</a></li>
+                                <li><a href="#">Newsroom, Article and Event</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+                <div id="sidebar-footer-middle" class="sidebar-footer">
+                    <aside class="widget-container">
+                        <div class="widget-wrapper clearfix">
+                            <h3 class="widget-title">Campus Location</h3>		
+                            <article class="text-widget ">
+					           <iframe class="map-area" src="http://maps.google.com/?ie=UTF8&amp;ll=37.055177,-95.668945&amp;spn=11.79095,12.150879&amp;t=m&amp;z=6&amp;output=embed"></iframe><br />                                   </article>
+                        </div>
+                    </aside>
+                </div>
+                <article id="footer-address" class="clearfix">
+                    <h3 id="title-footer-address"><span>Contact School Fun</span></h3>
+                    <p><strong>You can contact us via our hotline phone +62 4567 88987 and the Medical Campus is +62 4567 5446</strong></p>
+                    <p>Vivamus enim massa, egestas quis viverra ut, adipiscing eget metus. Etiam neque orci, cursus vitae sem in, rhoncus vestibulum dolor.</p>
+                    <ul id="list-social" class="clearfix">
+                        <li id="icon-facebook"><a href="#">Facebook</a></li>
+                        <li id="icon-twitter"><a href="#">Twitter</a></li>
+                        <li id="icon-gplus"><a href="#">Google Plus</a></li>
+                        <li id="icon-linkedin"><a href="#">Linkedin</a></li>
+                        <li id="icon-youtube"><a href="#">Youtube</a></li>
+                        <li id="icon-flickr" class="last"><a href="#">Flickr</a></li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+        <div id="footer-copyright">
+            <div id="footer-copyright-content" class="clearfix">
+                <a href="#" id="logo-footer"><img src="images/logo-footer.png" data-retina="images/logo-footer-retina.png" alt="School Fun - University" /></a>
+                <p id="text-address">P Sherman, 42 Wallaby Way, Australia</p>
+                <ul id="nav-footer" class="clearfix">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <p id="text-copyright">Copyright &copy; 2013. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
