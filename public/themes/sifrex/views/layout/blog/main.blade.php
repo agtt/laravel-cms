@@ -53,7 +53,7 @@
 				<div class="header-wrapper">
 					<div class="container">
 						<!-- Logo -->
-						<div class="logo float-left"><a href="index.html"><img src="images/logo/logo.png" alt="Logo"></a></div>
+						<div class="logo float-left"><a href="/"><img src="images/logo.png" alt="Logo"></a></div>
 
 						<!-- Curt Button -->
 						<button class="cart-button float-right">

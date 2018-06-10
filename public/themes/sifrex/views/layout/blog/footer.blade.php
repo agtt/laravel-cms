@@ -10,7 +10,7 @@
 					<div class="row">
 						<div class="col-md-3 col-sm-6">
 							<div class="footer-logo">
-								<a href="index.html"><img src="images/logo/logo.png" alt="Logo"></a>
+								<a href="/"><img src="images/logo.png" alt="Logo"></a>
 								<p>2011 yılında çıktığımız bu yolda bir çok başarıya imza attık eğitimin ücretsiz olması ve kolay bir şekilde paylaşılabilir olması için çalışıyoruz.</p>
 								<p>&copy; 2018 Şifrex  <a href="http://www.karesoft.com.tr">Karesoft</a></p>
 								<ul>
