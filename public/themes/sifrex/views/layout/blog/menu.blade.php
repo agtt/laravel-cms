@@ -22,7 +22,7 @@
 <ul class="dropdown-menu">
   @foreach ($categories as $category)
       <li>
-          {!! link_to_route('post.category', $category->name, $category->slug) !!}
+          {!! link_to_route('post.category', $category->name, str_replace("category","",$category->slug)) !!}
       </li>
   @endforeach
 </ul>

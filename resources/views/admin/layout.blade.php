@@ -12,8 +12,8 @@
         <link href="//cdn.datatables.net/1.10.9/css/dataTables.bootstrap.min.css" rel="stylesheet">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
         <link href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css" rel="stylesheet">
-        <link href="/js/lib/wysiwyg/ui/trumbowyg.min.css" rel="stylesheet">
-        <link href="/js/lib/magicsuggest/jquery.tags.css" rel="stylesheet">
+        <link href="{{ url('js/lib/wysiwyg/ui/trumbowyg.min.css') }}" rel="stylesheet">
+        <link href="{{ url('js/lib/magicsuggest/jquery.tags.css') }}" rel="stylesheet">
         <link href="{{ elixir('css/admin.css') }}" rel="stylesheet">
         @yield('styles')
 
@@ -36,7 +36,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" style="margin-top:-5px;" href="{{ route('admin.home') }}">
-                        <img src="../img/karelogo.png">
+                        <img src="{{ url('img/karelogo.png') }}">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="admin_nav">
@@ -78,8 +78,8 @@
                                 <i class="fa fa-caret-down"></i>
                             </a>
                              <ul class="dropdown-menu">
-                                <li><a href="../admin/lesson/create">{{trans('admin.addlesson')}}</a></li>
-                                <li><a href="../admin/lesson">{{trans('admin.lessons')}}</a></li>
+                                <li><a href="{{ url('/admin/lesson/create') }}">{{trans('admin.addlesson')}}</a></li>
+                                <li><a href="{{ url('/admin/lesson') }}">{{trans('admin.lessons')}}</a></li>
 
                             </ul>
                         </li>
@@ -93,8 +93,8 @@
                                 <i class="fa fa-caret-down"></i>
                             </a>
                              <ul class="dropdown-menu">
-                                <li><a href="../admin/video/create">{{trans('admin.videoadd')}}</a></li>
-                                <li><a href="../admin/video">{{trans('admin.videos')}}</a></li>
+                                <li><a href="{{ url('/admin/video/create') }}">{{trans('admin.videoadd')}}</a></li>
+                                <li><a href="{{ url('/admin/video') }}">{{trans('admin.videos')}}</a></li>
 
                             </ul>
                         </li>
@@ -109,7 +109,7 @@
 
 
                         <li>
-                            <a href="../admin/message">
+                            <a href="{{ url('/admin/message') }}">
                                 <i class="fa fa-envelope fa-fw"></i>
                                {{trans('admin.contact')}}
                             </a>
@@ -202,16 +202,16 @@
         <script src="//cdn.datatables.net/1.10.9/js/dataTables.bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-        <script src="/js/lib/wysiwyg/trumbowyg.min.js"></script>
-        <script src="/js/lib/wysiwyg/plugins/base64/trumbowyg.base64.min.js"></script>
-        <script src="/js/lib/wysiwyg/plugins/colors/trumbowyg.colors.min.js"></script>
-        <script src="/js/lib/wysiwyg/plugins/noembed/trumbowyg.noembed.min.js"></script>
-        <script src="/js/lib/wysiwyg/plugins/pasteimage/trumbowyg.pasteimage.min.js"></script>
-        <script src="/js/lib/wysiwyg/plugins/preformatted/trumbowyg.preformatted.min.js"></script>
-        <script src="/js/lib/wysiwyg/plugins/upload/trumbowyg.upload.min.js"></script>
-        <script src="/js/lib/magicsuggest/jquery.tags.js"></script>
-        <script src="/js/lib/jquery.sortable.js"></script>
-        <script src="/js/admin.js"></script>
+        <script src="{{ url('js/lib/wysiwyg/trumbowyg.min.js') }}"></script>
+        <script src="{{ url('js/lib/wysiwyg/plugins/base64/trumbowyg.base64.min.js') }}"></script>
+        <script src="{{ url('js/lib/wysiwyg/plugins/colors/trumbowyg.colors.min.js') }}"></script>
+        <script src="{{ url('js/lib/wysiwyg/plugins/noembed/trumbowyg.noembed.min.js') }}"></script>
+        <script src="{{ url('js/lib/wysiwyg/plugins/pasteimage/trumbowyg.pasteimage.min.js') }}"></script>
+        <script src="{{ url('js/lib/wysiwyg/plugins/preformatted/trumbowyg.preformatted.min.js') }}"></script>
+        <script src="{{ url('js/lib/wysiwyg/plugins/upload/trumbowyg.upload.min.js') }}"></script>
+        <script src="{{ url('js/lib/magicsuggest/jquery.tags.js') }}"></script>
+        <script src="{{ url('js/lib/jquery.sortable.js') }}"></script>
+        <script src="{{ url('js/admin.js') }}"></script>
         @yield('scripts')
     </body>
 </html>

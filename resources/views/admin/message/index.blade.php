@@ -28,7 +28,7 @@
                     @foreach ($messages as $message)
                         <tr>
                             <td>
-                                <a href="/admin/message/read/{{$message->id}}">
+                                <a href="{{ url('admin/message/read/') }}/{{$message->id}}">
                                     {{ str_limit($message->title, 40) }}
                                 </a>
                             </td>
