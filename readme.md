@@ -4,7 +4,6 @@ This project aims to achieve a full-featured personnal website / blog.
 
 This is an open source project, if you'd like to participate and/or use it, enjoy :)
 
-Demo : http://mydnic.be
 
 # Installation
 ## Vagrant
